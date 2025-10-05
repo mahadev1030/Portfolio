@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background: #f8f9fa; }
+        .navbar { background: #212529; }
+        .navbar-brand, .nav-link { color: #fff !important; }
+    .hero { background: linear-gradient(135deg, #232526 0%, #bdc3c7 100%); color: #fff; padding: 60px 0; }
+        .hero-title { font-size: 3rem; font-weight: 700; }
+        .hero-subtitle { font-size: 1.5rem; font-weight: 400; }
+        .section-title { font-size: 2rem; font-weight: 600; margin-bottom: 30px; }
+        .card { box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: none; }
+        .portfolio-card {
+            min-height: 200px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    .profile-img { width: 350px; height: 350px; object-fit: contain; border-radius: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+        .contact-info strong { display: block; margin-top: 10px; }
+        .footer { background: #212529; color: #fff; padding: 20px 0; text-align: center; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="container">
+            <img src="../static/images/D74AB5D5-ED75-4803-A485-9B4F35798ED2.jpg" alt="Profile" class="profile-img mb-3">
+            <h1 class="hero-title">Konchada Mahadev</h1>
+            <p class="hero-subtitle">FullStack In Python and Gen-AI Developer</p>
+            <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
+                <a href="{{ url_for('static', filename='images/Mahadev_Resume copy.pdf') }}" class="btn btn-light btn-lg" target="_blank">
+                    <span class="me-2">Download CV</span>
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/file-earmark-arrow-down.svg" alt="Download CV" width="24" height="24">
+                </a>
+                <a href="https://linkedin.com/in/konchada-mahadev-95764b253" class="btn btn-outline-primary btn-lg" target="_blank" title="LinkedIn">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                </a>
+                <a href="https://www.instagram.com/the_mahadev_life/" class="btn btn-outline-danger btn-lg" target="_blank" title="Instagram">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/instagram.svg" alt="Instagram" width="24" height="24">
+                </a>
+                <a href="https://github.com/mahadev1030" class="btn btn-outline-dark btn-lg" target="_blank" title="GitHub">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/github.svg" alt="GitHub" width="24" height="24">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="lead">I'm Konchada Mahadev — A Btech graduate in Electronics and Communication Engineering and Specialist Programmer with practical experience delivering full‑stack Python services and Gen‑AI integrations. My work spans document intelligence platforms, automation pipelines, and developer-facing foundation services that make LLMs practical for production use. I enjoy turning research ideas into reliable, maintainable systems and mentoring peers on practical ML/AI integrations.</p>
+
+                    <div class="mt-3">
+                        <p><strong>Core strengths:</strong> Python, Flask/FastAPI, SQL databases,AI,ML, Document parsing & retrieval, LLM orchestration, and API design.</p>
+                        <p><strong>Focus:</strong> Building scalable document ingestion & retrieval systems, pragmatic Gen‑AI features (summarization, retrieval-augmented generation), and developer tooling that improves team velocity.</p>
+                        <p class="mb-0"><strong>Contact:</strong> <a href="mailto:mahadevsai12@gmail.com">mahadevsai12@gmail.com</a> <strong>Phone no:</strong> <a href="tel:+919346821030">+91 9346821030</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Experience</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card portfolio-card p-3 mb-4">
+                        <h5 class="d-flex align-items-center justify-content-between">
+                            <strong>Internship</strong>
+                            <a href="https://drive.google.com/file/d/160GdDCSBadBPu1XfnDzL-qT6glJqCilJ/view" class="btn btn-outline-secondary btn-sm ms-3" target="_blank" rel="noopener" title="View Internship Certificate">
+                                <img src="{{ url_for('static', filename='images/drive-logo.jpg') }}" alt="Drive" width="20" height="20">
+                            </a>
+                        </h5>
+                        <p>Company: Bluerose Technologies and Private Limited</p>
+                        <p>Client: Oppo & Oneplus Research and Development Center</p>
+                        <p>Duration: July 2023 - Feb 2024</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card portfolio-card p-3 mb-4">
+                        <h5>
+                            <span tabindex="0" class="school-pop fw-bold" data-bs-toggle="popover" data-bs-trigger="hover focus" title="Software Test Engineer Details" data-bs-content="Company: Bluerose Technologies and Private Limited, Client: Oppo & Oneplus Research and Development Center, Duration: Feb 2024 - Sep 2024">Software Test Engineer</span>
+                        </h5>
+                        <p>Company: Bluerose Technologies and Private Limited</p>
+                        <p>Client: Oppo & Oneplus Research and Development Center</p>
+                        <p>Duration: Feb 2024 - Sep 2024</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card portfolio-card p-3 mb-4">
+                        <h5>
+                            <span tabindex="0" class="school-pop fw-bold" data-bs-toggle="popover" data-bs-trigger="hover focus" title="Specialist Programmer Details" data-bs-content="Company: Infosys, Duration: Sep 2024 - Present">Specialist Programmer</span>
+                        </h5>
+                        <p>Company: Infosys</p>
+                        <p>Duration: Sep 2024 - Present</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Skills</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card portfolio-card p-3 mb-4">
+                        <h5 class="fw-bold">Programming Languages</h5>
+                        <p>Python, GEN-AI, Vector Databases, Embeddings, RAG (Retrieval-Augmented Generation), Azure AI Search</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card portfolio-card p-3 mb-4">
+                        <h5 class="fw-bold">Tools</h5>
+                        <p>PyCharm, SQL Workbench, Jupyter Notebook, VSCode, GIT</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card portfolio-card p-3 mb-4">
+                        <h5 class="fw-bold">Web-Development &amp; Gen-AI Technologies</h5>
+                        <p>Flask &amp; FastAPI, LangChain &amp; LangGraph, Prompt Engineering, Machine Learning, Front-end (Streamlit / HTML &amp; CSS)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Education Section -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Education</h2>
+            <div class="row">
+                    <div class="col-md-4">
+                        <div class="card portfolio-card p-3 mb-4">
+                            <h5 class="fw-bold">
+                                <span tabindex="0" class="school-pop" data-bs-toggle="popover" data-bs-trigger="hover focus" title="10th Class Details" data-bs-content="School: Kendriya Vidyalaya, Board: CBSE, Percentage: 78%">10th Class - Kendriya Vidyalaya</span>
+                            </h5>
+                            <p>Board: CBSE</p>
+                            <p>Percentage: 78%</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card portfolio-card p-3 mb-4">
+                            <h5 class="fw-bold">
+                                <span tabindex="0" class="school-pop" data-bs-toggle="popover" data-bs-trigger="hover focus" title="12th Class Details" data-bs-content="College: Kendriya Vidyalaya, Group: MPC with Computer Science, Board: CBSE, Percentage: 81%">12th Class - Kendriya Vidyalaya</span>
+                            </h5>
+                            <p>Group: MPC with Computer Science</p>
+                            <p>Board: CBSE</p>
+                            <p>Percentage: 81%</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card portfolio-card p-3 mb-4">
+                            <h5 class="fw-bold">
+                                <span tabindex="0" class="school-pop" data-bs-toggle="popover" data-bs-trigger="hover focus" title="B.Tech Details" data-bs-content="College: Lendi Institute of Engineering and Technology, Branch: Electronics and Communication Engineering, Board: JNTUV, CGPA: 8.56">Bachelor of Technology - Lendi Institute of Engineering and Technology</span>
+                            </h5>
+                            <p>Branch: Electronics and Communication Engineering</p>
+                            <p>Board: JNTUV</p>
+                            <p>CGPA: 8.56</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->   
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Projects</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title d-flex align-items-center justify-content-between">
+                                <strong>Foundation Platform</strong>
+                                <a href="https://github.com/mahadev1030" class="btn btn-outline-dark btn-sm ms-3" target="_blank" rel="noopener" title="View Foundation Platform on GitHub">
+                                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/github.svg" alt="GitHub" width="16" height="16">
+                                </a>
+                            </h5>
+                            <p class="card-text"><strong>Foundation Platform – Reusable Document Intelligence APIs</strong></p>
+                            <p class="card-text">Designed and developed reusable APIs for document ingestion, retrieval, summarization, and LLM invocation, forming the core foundation for multiple downstream projects.</p>
+                            <p class="card-text">Implemented asynchronous ingestion workflows with support for .pdf, .docx, .txt, etc., enabling background processing and job tracking through a status API (in-progress, completed, failed).</p>
+                            <p class="card-text">Built retrieval APIs to fetch documents based on user queries and session context, improving traceability and user experience.</p>
+                            <p class="card-text">Developed summarization using MapReduce techniques for both documents and LLM conversations, enhancing efficiency and scalability.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title d-flex align-items-center justify-content-between">
+                                <strong>Proposal Assistant</strong>
+                                <a href="https://github.com/mahadev1030" class="btn btn-outline-dark btn-sm ms-3" target="_blank" rel="noopener" title="View Proposal Assistant on GitHub">
+                                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/github.svg" alt="GitHub" width="16" height="16">
+                                </a>
+                            </h5>
+                            <p class="card-text">Built an AI-driven assistant to automate proposal creation by ingesting documents (.pdf, Box links, etc.) into a vector database for intelligent retrieval.</p>
+                            <p class="card-text">Developed pipeline to extract and structure proposal data (text, tables, images) and populate a standardized template using LLMs.</p>
+                            <p class="card-text">Integrated best practices documents into the LLM workflow to ensure proposals adhere to organizational guidelines and quality standards.</p>
+                            <p class="card-text">Implemented advanced document parsing and formatting to handle complex elements like tables and images seamlessly.</p>
+                            <p class="card-text mt-auto">Delivered a scalable solution that reduced manual effort in proposal preparation and improved consistency and turnaround time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title d-flex align-items-center justify-content-between">
+                                <strong>AI Powered Code Generator</strong>
+                                <a href="https://github.com/mahadev1030/AI_Powered_Code_Generator" class="btn btn-outline-dark btn-sm ms-3" target="_blank" rel="noopener" title="View AI Powered Code Generator on GitHub">
+                                    <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/github.svg" alt="GitHub" width="16" height="16">
+                                </a>
+                            </h5>
+                            <p class="card-text">Uses Google Gemini (configurable) to generate clean, documented Python code from natural-language prompts and returns both code and generation metadata.</p>
+                            <p class="card-text">Supports safe code execution in a sandboxed environment with captured stdout/stderr and execution success tracking.</p>
+                            <p class="card-text">Stores user sessions and generation history in a database (SQLite by default, MySQL optional) with analytics endpoints and a server-rendered history UI.</p>
+                            <p class="card-text">Includes developer tooling and setup scripts (init_db, setup_database, query_db, check_db) and a `config_template.py` for easy configuration.</p>
+                            <p class="card-text mt-auto">Designed with security and observability: API key hashing for analytics, input validation, error logging, and endpoints for history and analytics (/generate, /execute, /history, /analytics).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Achievements & Certifications</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card p-3 mb-4">
+                        <ul class="mb-0 list-unstyled">
+                            <li class="d-flex align-items-center justify-content-between">
+                                <span><strong>• Achieved Infosys Certified Python Programmer</strong></span>
+                                <a href="https://drive.google.com/file/d/1si1LzChmWvAF-5c-sh0_QohR7kHp5er_/view" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm ms-3" title="View Infosys certificate">
+                                    <img src="{{ url_for('static', filename='images/drive-logo.jpg') }}" alt="Drive" width="20" height="20">
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between">
+                                <span><strong>• Achieved Microsoft Azure AI Engineer Certificate</strong></span>
+                                <a href="https://drive.google.com/file/d/18ZcGn7EBNez2qnElSDr17zwYV3WZ03Hf/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm ms-3" title="View Microsoft certificate">
+                                    <img src="{{ url_for('static', filename='images/drive-logo.jpg') }}" alt="Drive" width="20" height="20">
+                                </a>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between">
+                                <span><strong>• Received Outstanding Contribution Award from OPPO.</strong></span>
+                                <a href="https://drive.google.com/file/d/1sbSOrLMU0v25MDVmgN5hA10aNpO9ASpk/view?usp=drivesdk" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm ms-3" title="View OPPO Award certificate">
+                                    <img src="{{ url_for('static', filename='images/drive-logo.jpg') }}" alt="Drive" width="20" height="20">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Contact</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="/sendemail/" method="POST">
+                        <div class="mb-3">
+                            <input class="form-control" type="text" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="email" name="_replyto" placeholder="E-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6 contact-info">
+                    <strong>Address</strong>
+                    <p>Mig-150, Near 7 Temples, Babametta , Vizianagaram, AndhraPradesh, India, 535002</p>
+                    <strong>Phone</strong>
+                    <p>+91 9346821030</p>
+                    <strong>Email</strong>
+                    <p>mahadevsai12@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            &copy; 2025 Konchada Mahadev. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl, { html: false });
+            });
+        });
+    </script>
+</body>
+</html>
